@@ -1,0 +1,62 @@
+# Airbnb Sentiment Analysis Configuration
+
+# Data Configuration
+data:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  sample_size: null  # Set to a number to limit data for testing, null for all data
+  demo_mode: false   # Set to true for quick demo with 20 listings
+
+# Analysis Configuration
+analysis:
+  sentiment:
+    use_transformers: false  # Set to true to enable BERT sentiment analysis
+    text_column: "comments"
+    preprocessing:
+      remove_stopwords: true
+      lowercase: true
+      remove_special_chars: true
+  
+  satisfaction:
+    weights:
+      sentiment_score: 0.5
+      review_count: 0.2
+      price_inverse: 0.2
+      availability: 0.1
+
+# Forecasting Configuration
+forecasting:
+  periods: 180  # Number of days to forecast
+  confidence_interval: 0.95
+  polynomial_degree: 2
+
+# Visualization Configuration
+visualization:
+  style: "whitegrid"
+  figure_size: [10, 6]
+  font_size: 12
+  dpi: 300
+  color_palette: "viridis"
+
+# Output Configuration
+output:
+  plots_dir: "outputs/visualizations"
+  reports_dir: "outputs/reports"
+  models_dir: "outputs/models"
+  logs_dir: "outputs/logs"
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  console_output: true
+  file_output: true
+
+# Model Configuration
+models:
+  save_models: true
+  model_format: "pickle"  # pickle, joblib
+
+# Performance Configuration
+performance:
+  n_jobs: -1  # Number of CPU cores to use (-1 for all available)
+  chunk_size: 1000  # For processing large datasets in chunks 
