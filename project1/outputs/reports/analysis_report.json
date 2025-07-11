@@ -1,0 +1,17 @@
+{
+    "analysis_date": "2025-07-09 02:11:22",
+    "data_summary": {
+        "total_listings": 19,
+        "total_reviews": 651,
+        "avg_sentiment": 0.9143013824884793,
+        "avg_satisfaction": NaN
+    },
+    "top_neighborhoods": {
+        "Queen Anne": 0.9766,
+        "Lower Queen Anne": 0.9515408333333333,
+        "North Beacon Hill": 0.9450914285714287,
+        "Capitol Hill": 0.93706,
+        "Eastlake": 0.9212702702702703
+    },
+    "forecast_metrics": {}
+}
